@@ -23,7 +23,7 @@
 
 ## TODO
 
-- [ ] 兼容uniapp的Video组件
+- [x] 兼容uniapp的Video组件
 - [ ] 拍照（兼容IOS与微信）
 - [ ] 全屏播放视频（兼容IOS与微信）
 

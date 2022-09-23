@@ -18,7 +18,12 @@ class VideoCapture {
   onstop
 
   constructor(video, msgHandle) {
-    this.video = video
+    // 判断是否是原生的Video标签，如果不是则默认它是uniapp的Video组件
+    if (video.constructor === HTMLVideoElement) {
+      this.video = video
+    } else {
+      this.video = video.$el.children[0].children[0]
+    }
     this.msgHandle = msgHandle
     this._initAttr()
     this._initGetUserMedia()
